@@ -1,0 +1,208 @@
+[2025-02-28T17:54:02.327Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T17:57:37.666Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T18:03:28.816Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T18:06:10.514Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T18:09:34.029Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T18:10:51.760Z] Balance updated for account 70938216540 to 939281.96
+[2025-02-28T18:15:30.085Z] Balance updated for account 70938216540 to 1039281.96
+[2025-02-28T18:16:43.676Z] Balance updated for account 70938216540 to 1139281.96
+[2025-02-28T18:18:26.612Z] Balance updated for account 70938216540 to 539281.96
+[2025-02-28T19:03:46.439Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:06:57.663Z] Balance updated for account 70938216540 to 539301
+[2025-02-28T19:11:03.879Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:11:26.693Z] Balance updated for account 70938216540 to 539401
+[2025-02-28T19:19:39.506Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:20:08.388Z] Balance updated for account 70938216540 to 529401
+[2025-02-28T19:22:04.877Z] Balance updated for account 70938216540 to 529301
+[2025-02-28T19:23:34.506Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:23:49.110Z] Balance updated for account 70938216540 to 629301
+[2025-02-28T19:24:22.408Z] Balance updated for account 70938216540 to 529301
+[2025-02-28T19:27:14.313Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:29:08.067Z] Balance updated for account 70938216540 to 539301
+[2025-02-28T19:32:54.789Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:36:56.443Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:37:47.845Z] Balance updated for account 70938216540 to 540301
+[2025-02-28T19:42:12.457Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:44:25.419Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T19:55:55.997Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T20:07:24.954Z] Failed login attempt - Username: amit1
+[2025-02-28T20:08:02.364Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T20:10:48.744Z] Successful login - Username: amit1, Role: Teller
+[2025-02-28T20:13:22.571Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:19:31.975Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:20:07.351Z] Balance updated for account 70938216540 to 677201
+[2025-03-01T15:20:12.033Z] Balance updated for account 70938216540 to 677201
+[2025-03-01T15:24:12.640Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:26:50.459Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:27:13.923Z] Balance updated for account 70938216540 to 677202
+[2025-03-01T15:33:30.851Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:33:51.333Z] Balance updated for account 70938216540 to 777202
+[2025-03-01T15:35:30.172Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:35:49.462Z] Balance updated for account 70938216540 to 877202
+[2025-03-01T15:36:15.586Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:36:32.720Z] Balance updated for account 70938216540 to 977202
+[2025-03-01T15:49:17.099Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T15:49:40.434Z] Successful login - Username: rahul1, Role: System Administrator
+[2025-03-01T15:50:46.498Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T15:53:26.401Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:59:27.824Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T15:59:30.688Z] User amit1 logged out
+[2025-03-01T16:00:09.987Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T16:00:15.070Z] User amit1 logged out
+[2025-03-01T16:00:44.827Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T16:00:58.261Z] Balance updated for account 70938216540 to 977212
+[2025-03-01T16:01:07.272Z] Balance updated for account 70938216540 to 977223
+[2025-03-01T16:01:20.793Z] Balance updated for account 70938216540 to 877223
+[2025-03-01T16:01:37.586Z] Balance updated for account 70938216540 to 577223
+[2025-03-01T16:02:02.209Z] Balance updated for account 70938216540 to 277223
+[2025-03-01T16:02:14.364Z] Balance updated for account 70938216540 to 278223
+[2025-03-01T16:02:30.093Z] Balance updated for account 70938216540 to 288223
+[2025-03-01T16:02:48.581Z] User amit1 logged out
+[2025-03-01T16:08:52.848Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T16:10:12.360Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T16:18:05.001Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T16:18:22.488Z] Balance updated for account 70938216540 to 388223
+[2025-03-01T16:22:57.323Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T16:23:11.072Z] Balance updated for account 70938216540 to 400623
+[2025-03-01T16:30:07.317Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T16:31:14.365Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T17:20:42.365Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T17:20:47.270Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T17:21:40.807Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T17:24:55.404Z] Successful login - Username: amit1, Role: Teller
+[2025-03-01T17:25:06.504Z] Balance updated for account 70938216540 to 500623
+[2025-03-01T17:37:08.438Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:09.655Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:12.787Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:13.355Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:13.801Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:14.055Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:14.475Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:14.771Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:15.080Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:15.816Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:16.071Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:19.556Z] Failed login attempt - Username: customer1
+[2025-03-01T17:37:50.432Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T17:37:57.391Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T17:37:57.450Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T17:37:57.475Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T17:38:01.253Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T17:38:02.954Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T17:38:03.639Z] Failed login attempt - Username: customer1
+[2025-03-01T17:39:07.854Z] Failed login attempt - Username: customer1
+[2025-03-01T17:41:26.599Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-03-01T17:41:38.778Z] Successful login - Username: customer2, Role: Bank Customer
+[2025-03-01T17:41:41.161Z] Successful login - Username: customer2, Role: Bank Customer
+[2025-03-01T17:41:45.358Z] Successful login - Username: customer3, Role: Bank Customer
+[2025-03-01T17:43:14.279Z] Successful login - Username: customer3, Role: Bank Customer
+[2025-03-01T17:43:16.627Z] Successful login - Username: customer3, Role: Bank Customer[2025-03-03T16:53:47.533Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:03:13.910Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:10:05.432Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:17:52.278Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:18:01.953Z] Balance updated for account 70938216540 to 600623
+[2025-03-03T17:18:13.526Z] Balance updated for account 70938216540 to 500623
+[2025-03-03T17:19:54.859Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:20:05.348Z] User amit1 logged out
+[2025-03-03T17:21:40.317Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:23:52.151Z] User amit1 logged out
+[2025-03-03T17:24:58.364Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:25:01.044Z] User amit1 logged out
+[2025-03-03T17:25:32.047Z] Failed login attempt - Username: amit1
+[2025-03-03T17:25:41.420Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:25:53.432Z] User amit1 logged out
+[2025-03-03T17:27:45.958Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:28:24.177Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:28:47.634Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:29:46.970Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:29:54.919Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:30:08.455Z] Balance updated for account 70938216540 to 500624
+[2025-03-03T17:33:08.860Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:33:12.963Z] Successful login - Username: amit1, Role: Teller
+[2025-03-03T17:33:16.418Z] Successful login - Username: amit1, Role: Teller
+[2025-03-04T06:31:36.982Z] Successful login - Username: amit1, Role: Teller
+[2025-03-04T06:32:25.605Z] Balance updated for account 70938216540 to 513024
+[2025-03-04T06:32:58.986Z] Balance updated for account 70938216540 to 500624
+[2025-04-18T15:36:46.898Z] Successful login - Username: amit1, Role: Teller
+[2025-04-18T15:37:12.703Z] Balance updated for account 70938216540 to 510624
+[2025-04-18T17:02:52.947Z] Loan application submitted by customer1
+[2025-04-18T17:10:14.249Z] Loan application submitted by customer1
+[2025-04-18T17:24:46.609Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T17:44:51.956Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T17:45:46.862Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T17:46:41.503Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T17:47:48.422Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T17:54:14.491Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T18:11:15.415Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T18:13:02.183Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T18:13:04.284Z] Loan application approved for loan ID: 2
+[2025-04-18T18:38:39.867Z] Loan application submitted by customer1
+[2025-04-18T18:41:12.472Z] Loan application submitted by customer1
+[2025-04-18T18:41:55.134Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T18:41:59.323Z] Loan application approved for loan ID: 4
+[2025-04-18T18:42:18.937Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-18T19:03:55.095Z] Login success - Username: suresh1, Role: Branch Manager
+[2025-04-18T19:09:03.480Z] Login success - Username: suresh1, Role: Branch Manager
+[2025-04-19T16:26:25.816Z] Failed login attempt - Username: anil1
+[2025-04-19T16:26:38.461Z] Failed login attempt - Username: anil1
+[2025-04-19T16:27:21.853Z] Failed login attempt - Username: anil1
+[2025-04-19T16:28:20.952Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T16:29:00.958Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-19T16:33:27.863Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T16:33:46.914Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-19T16:35:57.224Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T16:58:38.177Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T17:08:03.063Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-19T17:08:50.140Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T17:10:08.313Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T17:11:20.594Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-19T17:11:56.808Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T17:13:37.653Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T17:15:43.234Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T17:15:47.660Z] Delegated access from suresh1 to anil1 for 24 hour(s)
+[2025-04-19T17:16:03.091Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-19T17:17:18.737Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-04-19T17:17:37.697Z] Successful login - Username: pooja2, Role: Loan Officer
+[2025-04-19T17:43:57.721Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-19T17:44:06.339Z] Failed login attempt - Username: anil1
+[2025-04-19T17:45:11.058Z] Failed login attempt - Username: amit1
+[2025-04-19T17:46:52.038Z] Failed login attempt - Username: customer2
+[2025-04-19T17:47:04.732Z] Successful login - Username: customer2, Role: Bank Customer
+[2025-04-19T17:49:47.198Z] Failed login attempt - Username: customer2
+[2025-04-19T18:06:22.980Z] Failed login attempt - Username: customer2
+[2025-04-19T18:06:50.116Z] Failed login attempt - Username: customer2
+[2025-04-19T18:07:13.661Z] Failed login attempt - Username: customer2
+[2025-04-19T18:07:24.714Z] Locked out - Username: customer2
+[2025-04-19T18:07:56.107Z] Locked out - Username: customer2
+[2025-04-19T18:09:03.148Z] Locked out - Username: customer2
+[2025-04-19T18:14:06.779Z] Locked out - Username: customer2
+[2025-04-19T18:32:37.269Z] Successful login - Username: customer3, Role: Bank Customer
+[2025-04-19T18:36:55.952Z] Successful login - Username: amit1, Role: Teller
+[2025-04-19T18:38:38.533Z] Successful login - Username: amit1, Role: Teller
+[2025-04-19T18:45:03.963Z] Successful login - Username: amit1, Role: Teller
+[2025-04-19T18:48:52.884Z] Successful login - Username: amit1, Role: Teller
+[2025-04-19T18:49:58.556Z] User amit1 logged out
+[2025-04-19T18:52:37.444Z] Successful login - Username: amit1, Role: Teller
+[2025-04-19T18:53:02.250Z] Balance updated for account 54832097165 to 10687127.56
+[2025-04-19T18:53:29.618Z] Balance updated for account 54832097165 to 687127.5600000005
+[2025-04-19T18:53:44.849Z] User amit1 logged out
+[2025-04-19T18:56:54.274Z] Successful login - Username: amit1, Role: Teller
+[2025-04-19T18:57:12.548Z] Balance updated for account 54832097165 to 687027.56
+[2025-04-19T19:02:48.150Z] Successful login - Username: amit1, Role: Teller
+[2025-04-19T19:02:59.945Z] User amit1 logged out
+[2025-04-20T16:55:45.768Z] Successful login - Username: amit1, Role: Teller
+[2025-04-20T16:58:03.565Z] Balance updated for account 54832097165 to 787027.56
+[2025-04-20T17:00:37.877Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-20T17:03:23.022Z] Successful login - Username: pooja2, Role: Loan Officer
+[2025-04-20T17:04:05.119Z] Successful login - Username: anil1, Role: Loan Officer
+[2025-04-20T17:17:50.831Z] Successful login - Username: rahul1, Role: System Administrator
+[2025-04-20T17:19:58.041Z] Successful login - Username: rahul1, Role: System Administrator
+[2025-04-20T17:20:18.284Z] Successful login - Username: customer5, Role: Bank Customer
+[2025-04-20T17:22:02.553Z] Loan application submitted by customer5
+[2025-04-20T17:23:44.657Z] Successful login - Username: customer1, Role: Bank Customer
+[2025-04-21T09:06:08.293Z] Successful login - Username: amit1, Role: Teller
+[2025-04-21T09:06:50.339Z] Balance updated for account 70938216540 to 610624
+[2025-04-21T09:07:13.863Z] User amit1 logged out
+[2025-04-21T09:08:05.134Z] Successful login - Username: suresh1, Role: Branch Manager
+[2025-07-22T18:19:15.040Z] Successful login - Username: amit1, Role: Teller
+[2025-07-22T18:20:03.099Z] Balance updated for account 70938216540 to 609124

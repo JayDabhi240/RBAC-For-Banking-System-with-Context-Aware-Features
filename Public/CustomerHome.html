@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body class="container mt-5">
+  <h2 class="text-center mb-4">Welcome, <span id="fullName"></span></h2>
+
+  <div class="card p-4 shadow mb-4">
+    <h4>Account Details</h4>
+    <table class="table table-bordered">
+      <tr><th>Username</th><td id="username"></td></tr>
+      <tr><th>Account Number</th><td id="accNumber"></td></tr>
+      <tr><th>Account Type</th><td id="accType"></td></tr>
+      <tr><th>Balance</th><td id="accBalance"></td></tr>
+    </table>
+    <button class="btn btn-danger" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="card p-4 shadow mb-4">
+    <h4>Apply for a Loan</h4>
+    <form id="loanForm">
+      <div class="mb-3">
+        <label for="loanAmount" class="form-label">Loan Amount</label>
+        <input type="number" class="form-control" id="loanAmount" required />
+      </div>
+      <div class="mb-3">
+        <label for="loanDocument" class="form-label">Upload Document</label>
+        <input type="file" class="form-control" id="loanDocument" required />
+      </div>
+      <button type="submit" class="btn btn-success">Apply Loan</button>
+    </form>
+  </div>
+
+  <div class="card p-4 shadow">
+    <h4>Your Loan Applications</h4>
+    <table class="table table-striped" id="loanStatusTable">
+      <thead>
+        <tr>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    let customerData = {};
+
+    document.addEventListener("DOMContentLoaded", function () {
+      let username = localStorage.getItem("loggedInUser");
+
+      if (!username) {
+        alert("Unauthorized access! Please login.");
+        window.location.href = "index.html";
+        return;
+      }
+
+      axios.get(`/api/customer/${username}`)
+        .then(response => {
+          let customer = response.data;
+          customerData = customer;
+          document.getElementById("fullName").innerText = customer.full_name;
+          document.getElementById("username").innerText = customer.username;
+          document.getElementById("accNumber").innerText = customer.account_number;
+          document.getElementById("accType").innerText = customer.account_type;
+          document.getElementById("accBalance").innerText = customer.account_balance;
+
+          fetchLoanStatus(customer.username);
+        })
+        .catch(() => alert("Error fetching customer details."));
+    });
+
+    document.getElementById("loanForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const loanAmount = document.getElementById("loanAmount").value;
+      const loanDocument = document.getElementById("loanDocument").files[0];
+
+      const formData = new FormData();
+      formData.append("username", customerData.username);
+      formData.append("account_number", customerData.account_number);
+      formData.append("loan_amount", loanAmount);
+      formData.append("document", loanDocument);
+
+      axios.post("/api/apply-loan", formData)
+        .then(() => {
+          alert("Loan application submitted successfully.");
+          document.getElementById("loanForm").reset();
+          fetchLoanStatus(customerData.username);
+        })
+        .catch(() => alert("Failed to apply for loan."));
+    });
+
+    function fetchLoanStatus(username) {
+      axios.get(`/api/loan-status/${username}`)
+        .then(response => {
+          const tbody = document.querySelector("#loanStatusTable tbody");
+          tbody.innerHTML = "";
+
+          if (response.data.loans.length === 0) {
+            tbody.innerHTML = "<tr><td colspan='2'>No loans applied yet.</td></tr>";
+            return;
+          }
+
+          response.data.loans.forEach(loan => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>₹${loan.loan_amount}</td>
+              <td>${loan.status}</td>
+            `;
+            tbody.appendChild(row);
+          });
+        })
+        .catch(() => console.error("Error fetching loan status"));
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

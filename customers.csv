@@ -1,0 +1,21 @@
+user_id,username,full_name,email,phone_number,address,date_of_birth,account_number,account_type,balance,last_login,failed_login_attempts,created_at,updated_at
+1,customer1,Aarav Sharma,customer1@example.com,9.00E+00,"House No 481, Sector 10, City XYZ, India",19-10-1975,7.08E+11,Gold Current,332374.67,23-02-2025 14:14,5,23-02-2025 14:14,23-02-2025 14:14
+2,customer2,Vihaan Patel,customer2@example.com,1.00E+00,"House No 275, Sector 1, City XYZ, India",08-05-1990,9.87E+11,Regular Current,687127.56,23-02-2025 14:14,5,23-02-2025 14:14,23-02-2025 14:14
+3,customer3,Vivaan Gupta,customer3@example.com,2.00E+00,"House No 12, Sector 47, City XYZ, India",27-03-1984,9.78E+11,Savings,688637.83,23-02-2025 14:14,0,23-02-2025 14:14,23-02-2025 14:14
+4,customer4,Aadhya Nair,customer4@example.com,3.00E+00,"House No 443, Sector 21, City XYZ, India",14-07-1981,6.66E+11,Regular Current,849580.42,23-02-2025 14:14,4,23-02-2025 14:14,23-02-2025 14:14
+5,customer5,Anaya Iyer,customer5@example.com,4.00E+00,"House No 103, Sector 26, City XYZ, India",18-05-1992,6.51E+11,Gold Current,95837.84,23-02-2025 14:14,4,23-02-2025 14:14,23-02-2025 14:14
+6,customer6,Ishaan Reddy,customer6@example.com,5.00E+00,"House No 237, Sector 14, City XYZ, India",02-02-1981,7.51E+11,Gold Current,482444.2,23-02-2025 14:14,0,23-02-2025 14:14,23-02-2025 14:14
+7,customer7,Advait Pillai,customer7@example.com,6.00E+00,"House No 27, Sector 9, City XYZ, India",11-07-1975,4.38E+11,Regular Current,955284.88,23-02-2025 14:14,2,23-02-2025 14:14,23-02-2025 14:14
+8,customer8,Prisha Menon,customer8@example.com,7.00E+00,"House No 439, Sector 22, City XYZ, India",11-08-2000,3.65E+11,Regular Current,499779.44,23-02-2025 14:14,1,23-02-2025 14:14,23-02-2025 14:14
+9,customer9,Krishna Rao,customer9@example.com,8.00E+00,"House No 31, Sector 1, City XYZ, India",12-03-1988,1.48E+11,Gold Current,414177.67,23-02-2025 14:14,2,23-02-2025 14:14,23-02-2025 14:14
+10,customer10,Saanvi Ghosh,customer10@example.com,1.00E+01,"House No 452, Sector 14, City XYZ, India",28-02-1987,8.08E+11,Savings,929058.04,23-02-2025 14:14,5,23-02-2025 14:14,23-02-2025 14:14
+11,customer11,Riya Choudhary,customer11@example.com,1.10E+01,"House No 301, Sector 17, City XYZ, India",20-02-1991,7.52E+11,Gold Current,177088.78,23-02-2025 14:14,4,23-02-2025 14:14,23-02-2025 14:14
+12,customer12,Aryan Verma,customer12@example.com,1.20E+01,"House No 57, Sector 35, City XYZ, India",26-05-1991,3.52E+11,Gold Current,935783.77,23-02-2025 14:14,0,23-02-2025 14:14,23-02-2025 14:14
+13,customer13,Kabir Mehta,customer13@example.com,1.30E+01,"House No 20, Sector 2, City XYZ, India",23-07-2004,6.18E+11,Savings,355506.03,23-02-2025 14:14,1,23-02-2025 14:14,23-02-2025 14:14
+14,customer14,Tanvi Joshi,customer14@example.com,1.40E+01,"House No 57, Sector 36, City XYZ, India",11-03-1985,5.59E+11,Gold Current,247489.85,23-02-2025 14:14,1,23-02-2025 14:14,23-02-2025 14:14
+15,customer15,Meera Kapoor,customer15@example.com,1.50E+01,"House No 394, Sector 31, City XYZ, India",12-11-2000,9.91E+11,Savings,483332.08,23-02-2025 14:14,5,23-02-2025 14:14,23-02-2025 14:14
+16,customer16,Rohan Das,customer16@example.com,1.60E+01,"House No 85, Sector 44, City XYZ, India",15-12-1992,8.31E+11,Gold Current,900002.95,23-02-2025 14:14,4,23-02-2025 14:14,23-02-2025 14:14
+17,customer17,Sneha Sen,customer17@example.com,1.70E+01,"House No 38, Sector 23, City XYZ, India",19-04-1989,7.99E+11,Gold Current,12938.65,23-02-2025 14:14,1,23-02-2025 14:14,23-02-2025 14:14
+18,customer18,Arjun Malhotra,customer18@example.com,1.80E+01,"House No 109, Sector 24, City XYZ, India",19-02-1982,7.45E+11,Regular Current,121367.92,23-02-2025 14:14,3,23-02-2025 14:14,23-02-2025 14:14
+19,customer19,Neha Bhatt,customer19@example.com,1.90E+01,"House No 442, Sector 16, City XYZ, India",26-04-1990,3.62E+11,Gold Current,326050.63,23-02-2025 14:14,4,23-02-2025 14:14,23-02-2025 14:14
+20,customer20,Jay Dabhi,jaydabhi240@gmail.com,6.35E+09,"House No 177, Sector 48, City XYZ, India",15-07-2003,9.45E+11,Savings,839281.96,23-02-2025 14:14,2,23-02-2025 14:14,23-02-2025 14:14

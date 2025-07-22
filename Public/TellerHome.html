@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teller Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body class="container mt-5">
+    <h2 class="text-center">Teller - Customer Search</h2>
+
+    <div class="mb-3">
+        <label for="accountNumber" class="form-label">Enter Account Number:</label>
+        <input type="text" id="accountNumber" class="form-control" placeholder="Enter Account Number">
+    </div>
+    
+    <button class="btn btn-primary" onclick="searchCustomer()">Search</button>
+
+    <div id="customerDetails" class="mt-4" style="display: none;">
+        <h4>Customer Details</h4>
+        <table class="table table-bordered">
+            <tr><th>Account Number</th><td id="accNumber"></td></tr>
+            <tr><th>Full Name</th><td id="fullName"></td></tr>
+            <tr><th>Account Type</th><td id="accType"></td></tr>
+            <tr><th>Account Balance</th><td><input type="number" id="accBalance" class="form-control" readonly></td></tr>
+            <tr>
+                <th>Add Amount</th>
+                <td>
+                    <input type="number" id="amountSubmitted" class="form-control" placeholder="Enter amount">
+                    <button class="btn btn-success mt-2" onclick="calculateBalance('add')">Confirm</button>
+                </td>
+            </tr>
+            <tr>
+                <th>Deduct Amount</th>
+                <td>
+                    <input type="number" id="amountDeducted" class="form-control" placeholder="Enter amount">
+                    <button class="btn btn-danger mt-2" onclick="calculateBalance('subtract')">Confirm</button>
+                </td>
+            </tr>
+        </table>
+        <button class="btn btn-warning" onclick="updateBalance()">Update Balance</button>
+    </div>
+
+    <script>
+        let originalBalance = 0;  // Store the original balance before modification
+        let sessionTimeout; // Variable for auto logout
+
+        function startSessionTimeout() {
+            sessionTimeout = setTimeout(() => {
+                alert("Session expired due to inactivity! Redirecting to login...");
+                window.location.href = "/logout"; // Auto redirect
+            }, 300000); // 5 minutes (300,000 ms)
+        }
+
+        function resetSessionTimeout() {
+            clearTimeout(sessionTimeout);
+            startSessionTimeout();
+        }
+
+        // Start session timeout on page load
+        startSessionTimeout();
+
+        // Reset timeout on user activity
+        document.addEventListener("mousemove", resetSessionTimeout);
+        document.addEventListener("keydown", resetSessionTimeout);
+        document.addEventListener("click", resetSessionTimeout);
+
+        // Auto logout at 5:05 PM
+        function checkAutoLogoutTime() {
+            let now = new Date();
+            let currentHour = now.getHours();
+            let currentMinutes = now.getMinutes();
+
+            if (currentHour > 23 || (currentHour === 14 && currentMinutes >= 59)){  
+                alert("Working hours are over! Logging out...");
+                window.location.href = "/logout";
+            } else {
+                // Check again every minute
+                setTimeout(checkAutoLogoutTime, 60000);
+            }
+        }
+
+        // Start checking auto logout time
+        checkAutoLogoutTime();
+
+        function searchCustomer() {
+            resetSessionTimeout();
+            const accNum = document.getElementById("accountNumber").value;
+            axios.get(`/api/teller_customer/${accNum}`)
+                .then(response => {
+                    const customer = response.data;
+                    if (customer) {
+                        document.getElementById("customerDetails").style.display = "block";
+                        document.getElementById("accNumber").innerText = customer.account_number;
+                        document.getElementById("fullName").innerText = customer.full_name;
+                        document.getElementById("accType").innerText = customer.account_type;
+                        document.getElementById("accBalance").value = customer.account_balance;
+                        originalBalance = parseFloat(customer.account_balance); // Store original balance
+                    } else {
+                        alert("Customer not found!");
+                    }
+                })
+                .catch(error => {
+                    alert("Error fetching customer data");
+                });
+        }
+
+        function calculateBalance(action) {
+            resetSessionTimeout();
+            let balance = originalBalance;
+            let amountSubmitted = parseFloat(document.getElementById("amountSubmitted").value) || 0;
+            let amountDeducted = parseFloat(document.getElementById("amountDeducted").value) || 0;
+
+            if (action === 'add') {
+                balance += amountSubmitted;
+            } else if (action === 'subtract') {
+                if (amountDeducted > balance) {
+                    alert("Insufficient balance for this deduction!");
+                    return;
+                }
+                balance -= amountDeducted;
+            }
+
+            document.getElementById("accBalance").value = balance;
+        }
+
+        function updateBalance() {
+            resetSessionTimeout();
+            const accNum = document.getElementById("accNumber").innerText;
+            const newBalance = document.getElementById("accBalance").value;
+            axios.put("/api/customer/update-balance", { account_number: accNum, account_balance: newBalance })
+                .then(response => {
+                    alert("Balance updated successfully!");
+                    document.getElementById("amountSubmitted").value = "";
+                    document.getElementById("amountDeducted").value = "";
+                    originalBalance = parseFloat(newBalance); // Update stored balance
+                })
+                .catch(error => {
+                    alert("Error updating balance.");
+                });
+        }
+
+        // ========== Auto Logout if Outside NIT Surathkal ==========
+        const nitSurathkalLat = 13.0102;
+        const nitSurathkalLng = 74.7951;
+        // const nitTrichyLat = 10.7589;
+        // const nitTrichyLng = 78.8132;
+        const allowedRadius = 3573827867845; // 5 km range
+
+        function checkLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        let userLat = position.coords.latitude;
+                        let userLng = position.coords.longitude;
+                        let distance = getDistanceFromLatLonInKm(userLat, userLng, nitSurathkalLat, nitSurathkalLng);
+
+                        if (distance > allowedRadius) {
+                            alert("You have moved outside NIT Surathkal! Logging out...");
+                            window.location.href = "/logout";
+                        }
+                    },
+                    () => {
+                        alert("Geolocation permission denied! Logging out...");
+                        window.location.href = "/logout";
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+            let R = 6371; 
+            let dLat = deg2rad(lat2 - lat1);
+            let dLon = deg2rad(lon2 - lon1);
+            let a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+                    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c; 
+        }
+
+        function deg2rad(deg) {
+            return deg * (Math.PI / 180);
+        }
+
+        setInterval(checkLocation, 60000); // Check every 1 minute
+    </script>
+</body>
+</html>

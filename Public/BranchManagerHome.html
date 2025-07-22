@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Branch Manager Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script>
+    let customers = [];
+    let loans = [];
+
+    async function fetchDetails() {
+      try {
+        const customerRes = await fetch("/api/all-customers");
+        const customerData = await customerRes.json();
+        customers = customerData.customers;
+        displayCustomers(customers);
+
+        const loanRes = await fetch("/api/all-loans");
+        const loanData = await loanRes.json();
+        loans = loanData.loans;
+        displayLoans(loans);
+      } catch (err) {
+        console.error("Error fetching data:", err);
+        alert("Failed to load data.");
+      }
+    }
+
+    function displayCustomers(data) {
+      const customerTable = document.getElementById("customerTableBody");
+      customerTable.innerHTML = "";
+      data.forEach((cust) => {
+        const row = `<tr>
+            <td>${cust.username}</td>
+            <td>${cust.full_name}</td>
+            <td>${cust.account_number}</td>
+            <td>${cust.account_type}</td>
+            <td>${cust.account_balance}</td>
+          </tr>`;
+        customerTable.innerHTML += row;
+      });
+    }
+
+    function displayLoans(data) {
+      const loanTable = document.getElementById("loanTableBody");
+      loanTable.innerHTML = "";
+      data.forEach((loan) => {
+        const row = `<tr>
+            <td>${loan.id}</td>
+            <td>${loan.username}</td>
+            <td>${loan.account_number}</td>
+            <td>${loan.loan_amount}</td>
+            <td><a href="${loan.document}" target="_blank">View</a></td>
+            <td>${loan.status}</td>
+          </tr>`;
+        loanTable.innerHTML += row;
+      });
+    }
+
+    function searchCustomer() {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query === "") {
+        displayCustomers(customers);
+      } else {
+        const filtered = customers.filter(cust =>
+          cust.account_number.toString().includes(query)
+        );
+        displayCustomers(filtered);
+      }
+    }
+
+    function searchLoan() {
+      const query = document.getElementById("loanSearchInput").value.trim();
+      let filteredLoans = loans;
+      if (query !== "") {
+        filteredLoans = loans.filter(loan =>
+          loan.account_number.toString().includes(query)
+        );
+      }
+      const sortOrder = document.getElementById("sortOrder").value;
+      sortLoansAndDisplay(filteredLoans, sortOrder);
+    }
+
+    function sortLoansAndDisplay(data, order) {
+      const sorted = [...data].sort((a, b) => {
+        return order === "asc"
+          ? a.loan_amount - b.loan_amount
+          : b.loan_amount - a.loan_amount;
+      });
+      displayLoans(sorted);
+    }
+
+    function handleSortChange() {
+      searchLoan();
+    }
+
+    async function delegateAccess() {
+      const duration = document.getElementById("duration").value;
+      try {
+        const response = await fetch('/api/delegate-access', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ toUsername: "anil1", durationHours: duration })
+        });
+        const result = await response.json();
+        alert(result.message || "Delegation successful.");
+      } catch (error) {
+        console.error("Delegation error:", error);
+        alert("Failed to delegate access.");
+      }
+    }
+
+    window.onload = fetchDetails;
+  </script>
+</head>
+<body class="bg-light">
+  <div class="container mt-4">
+    <h2 class="mb-4 text-center">Branch Manager Dashboard</h2>
+
+    <!-- Search Customer Section -->
+    <div class="mb-3">
+      <label for="searchInput" class="form-label">Search Customer by Account Number</label>
+      <input type="text" id="searchInput" oninput="searchCustomer()" class="form-control" placeholder="Enter account number..." />
+    </div>
+
+    <!-- Customer Table -->
+    <div class="card mb-5">
+      <div class="card-header">All Customers</div>
+      <div class="card-body table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Full Name</th>
+              <th>Account Number</th>
+              <th>Account Type</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody id="customerTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Loan Filter Section -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+      <div class="w-50 me-2">
+        <label for="loanSearchInput" class="form-label">Search Loan by Account Number</label>
+        <input type="text" id="loanSearchInput" oninput="searchLoan()" class="form-control" placeholder="Enter account number..." />
+      </div>
+      <div>
+        <label for="sortOrder" class="form-label">Sort by Loan Amount</label>
+        <select id="sortOrder" onchange="handleSortChange()" class="form-select">
+          <option value="asc">Ascending</option>
+          <option value="desc" selected>Descending</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Loan Table -->
+    <div class="card">
+      <div class="card-header">Loan Applications</div>
+      <div class="card-body table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Loan ID</th>
+              <th>Username</th>
+              <th>Account Number</th>
+              <th>Loan Amount</th>
+              <th>Document</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="loanTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Delegation Section -->
+    <div class="card mt-5 p-4 bg-warning-subtle">
+      <h5 class="mb-3">Delegate Access to Loan Officer</h5>
+      <p class="text-muted">Temporarily give access to your dashboard to a Loan Officer.</p>
+      <div class="mb-3">
+        <label for="duration" class="form-label">Delegation Duration (in hours):</label>
+        <input type="number" id="duration" class="form-control w-25" value="24" min="1" max="48" />
+      </div>
+      <button onclick="delegateAccess()" class="btn btn-primary">Delegate Access</button>
+    </div>
+  </div>
+</body>
+</html>

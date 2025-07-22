@@ -1,0 +1,33 @@
+id,username,password,role
+1,amit1,Pass@123,Teller
+2,rajesh2,Pass@123,Teller
+3,priya3,Pass@123,Teller
+4,neha1,Pass@123,Customer Service Representative
+5,vikas2,Pass@123,Customer Service Representative
+6,anil1,Pass@123,Loan Officer
+7,pooja2,Pass@123,Loan Officer
+8,suresh1,Pass@123,Branch Manager
+9,ananya2,Pass@123,Branch Manager
+10,meera1,Pass@123,Risk Manager
+11,rahul1,Pass@123,System Administrator
+12,vivek1,Pass@123,Auditor
+13,customer1,Pass@123,Bank Customer
+14,customer2,Pass@123,Bank Customer
+15,customer3,Pass@123,Bank Customer
+16,customer4,Pass@123,Bank Customer
+17,customer5,Pass@123,Bank Customer
+18,customer6,Pass@123,Bank Customer
+19,customer7,Pass@123,Bank Customer
+20,customer8,Pass@123,Bank Customer
+21,customer9,Pass@123,Bank Customer
+22,customer10,Pass@123,Bank Customer
+23,customer11,Pass@123,Bank Customer
+24,customer12,Pass@123,Bank Customer
+25,customer13,Pass@123,Bank Customer
+26,customer14,Pass@123,Bank Customer
+27,customer15,Pass@123,Bank Customer
+28,customer16,Pass@123,Bank Customer
+29,customer17,Pass@123,Bank Customer
+30,customer18,Pass@123,Bank Customer
+31,customer19,Pass@123,Bank Customer
+32,customer20,Pass@123,Bank Customer
